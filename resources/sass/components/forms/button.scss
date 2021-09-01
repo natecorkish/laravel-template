@@ -1,0 +1,54 @@
+.button {
+
+    @apply inline-flex;
+    @apply items-center;
+    @apply justify-center;
+    @apply shadow-sm;
+
+    @apply rounded-md;
+    @apply border;
+    @apply text-sm;
+    @apply py-2;
+    @apply px-4;
+    @apply font-medium;
+    //@apply tracking-widest;
+    @apply transition;
+    @apply ease-in-out;
+    @apply duration-150;
+
+    &.primary {
+        @apply bg-primary;
+        @apply text-primary;
+        @apply border-primary;
+
+        &:hover {
+            @apply bg-secondary;
+            @apply text-secondary;
+            @apply border-secondary;
+        }
+    }
+
+    &.secondary {
+        @apply bg-secondary;
+        @apply text-secondary;
+        @apply border-secondary;
+
+        &:hover {
+            @apply bg-primary;
+            @apply text-primary;
+            @apply border-primary;
+        }
+    }
+
+    &.ternary {
+        @apply bg-ternary;
+        @apply text-ternary-opposite;
+        @apply border-primary;
+
+        &:hover {
+            @apply bg-primary;
+            @apply text-primary;
+            @apply border-primary;
+        }
+    }
+}

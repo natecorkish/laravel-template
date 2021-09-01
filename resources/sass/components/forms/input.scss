@@ -1,0 +1,45 @@
+.input {
+
+    @apply border-gray-300;
+    @apply rounded-md;
+    @apply shadow-sm;
+    @apply mt-1;
+    @apply block;
+    @apply w-full;
+
+    &.primary {
+        @apply bg-primary;
+        @apply text-primary;
+        @apply border-primary;
+
+        &:hover {
+            @apply bg-secondary;
+            @apply text-secondary;
+            @apply border-secondary;
+        }
+    }
+
+    &.secondary {
+        @apply bg-secondary;
+        @apply text-secondary;
+        @apply border-secondary;
+
+        &:hover {
+            @apply bg-primary;
+            @apply text-primary;
+            @apply border-primary;
+        }
+    }
+
+    &.ternary {
+        @apply bg-ternary;
+        @apply text-ternary-opposite;
+        @apply border-primary;
+
+        &:hover {
+            @apply bg-primary;
+            @apply text-primary;
+            @apply border-primary;
+        }
+    }
+}

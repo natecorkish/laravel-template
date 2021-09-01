@@ -1,16 +1,21 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+/**-----------------------------------------------------------
+ * Users routes
+ * -----------------------------------------------------------
+ */
 
-Route::prefix('users')->group(function() {
-    Route::get('/', 'UsersController@index');
+use App\Users\Http\Controllers\UserEdit;
+use App\Users\Http\Controllers\UserUpdate;
+
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+
+    // edit
+    Route::get('users/{user}/edit', UserEdit::class)->name('users.edit');
+
+    // update
+    Route::patch('users/{user}/update', UserUpdate::class)->name('users.update');
+
 });
+
+require __DIR__ . '/auth.php';
