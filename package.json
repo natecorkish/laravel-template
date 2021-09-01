@@ -18,7 +18,8 @@
         "postcss": "^8.1.14",
         "sass": "^1.32.5",
         "sass-loader": "^8.0.2",
-        "tailwindcss": "^2.0.2"
+        "tailwindcss": "^2.0.2",
+        "alpinejs": "^2.8.2"
     },
     "dependencies": {
         "@hotwired/turbo": "*",
